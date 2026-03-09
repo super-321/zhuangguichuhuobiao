@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".LoadingActivity">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:text="货柜"/>
+
+            <EditText android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:hint="货柜号"
+                      android:focusable="false"
+                      android:focusableInTouchMode="false"
+                      android:cursorVisible="false"
+                      style="@style/loading_gap"
+                      android:id="@+id/txtaj"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="0dp"
+                    android:text="..."
+                    style="@style/loading_gap"
+                    android:id="@+id/btnaj"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal"
+                      android:layout_marginTop="10dp">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:text="条码"/>
+
+            <EditText android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:hint="扫描或输入产品条码"
+                      android:id="@+id/txtbar"/>
+
+        </LinearLayout>
+
+        <!--<ListView android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/lvcheck"/>-->
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="序号"
+                      style="@style/loading_gap"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:id="@+id/lblord"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="型号"
+                      style="@style/loading_gap"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:id="@+id/lblmodel"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="应出货箱数"
+                      style="@style/loading_gap"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:id="@+id/lblplanning"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="实际出货箱数"
+                      style="@style/loading_gap"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:id="@+id/lbltotal"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="差异"
+                      style="@style/loading_gap"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      style="@style/loading_gap"
+                      android:id="@+id/lblunchecked"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql"><![CDATA[
+        create table lists
+        (
+        id integer primary key,
+        bar nvarchar(50),
+        model nvarchar(50),
+        name nvarchar(50),
+        planning int,
+        a int, --a柜的装柜数量
+        b int, --b柜的装柜数量
+        c int, --c柜的装柜数量
+        d int, --d柜的装柜数量
+        e int, --e柜的装柜数量
+        f int, --f柜的装柜数量
+        g int, --g柜的装柜数量
+        h int, --h柜的装柜数量
+        i int, --i柜的装柜数量
+        j int, --j柜的装柜数量
+            k int, --k柜的装柜数量
+            l int, --l柜的装柜数量
+            m int, --m柜的装柜数量
+            n int, --n柜的装柜数量
+            o int, --o柜的装柜数量
+            p int, --p柜的装柜数量
+            q int, --q柜的装柜数量
+            r int, --r柜的装柜数量
+            s int, --s柜的装柜数量
+            t int, --t柜的装柜数量
+            u int, --u柜的装柜数量
+            v int, --v柜的装柜数量
+            w int, --w柜的装柜数量
+            x int, --x柜的装柜数量
+            y int, --y柜的装柜数量
+            z int, --z柜的装柜数量
+        ord int, --a柜的装柜数量
+        order_no nvarchar(50)
+        );
+
+        create table ajs --aj柜对应的柜名，aj是柜号，柜名是贴在货柜身上的一串编号
+        (
+            id integer primary key,
+            order_no nvarchar(50), --回数
+            a nvarchar(50),
+            b nvarchar(50),
+            c nvarchar(50),
+            d nvarchar(50),
+            e nvarchar(50),
+            f nvarchar(50),
+            g nvarchar(50),
+            h nvarchar(50),
+            i nvarchar(50),
+            j nvarchar(50),
+                k nvarchar(50),
+                l nvarchar(50),
+                m nvarchar(50),
+                n nvarchar(50),
+                o nvarchar(50),
+                p nvarchar(50),
+                q nvarchar(50),
+                r nvarchar(50),
+                s nvarchar(50),
+                t nvarchar(50),
+                u nvarchar(50),
+                v nvarchar(50),
+                w nvarchar(50),
+                x nvarchar(50),
+                y nvarchar(50),
+                z nvarchar(50)
+        );
+
+        create table weights --每个柜的柜重
+        (
+            id integer primary key,
+            order_no nvarchar(50), --回数
+            a nvarchar(50),
+            b nvarchar(50),
+            c nvarchar(50),
+            d nvarchar(50),
+            e nvarchar(50),
+            f nvarchar(50),
+            g nvarchar(50),
+            h nvarchar(50),
+            i nvarchar(50),
+            j nvarchar(50),
+                k nvarchar(50),
+                l nvarchar(50),
+                m nvarchar(50),
+                n nvarchar(50),
+                o nvarchar(50),
+                p nvarchar(50),
+                q nvarchar(50),
+                r nvarchar(50),
+                s nvarchar(50),
+                t nvarchar(50),
+                u nvarchar(50),
+                v nvarchar(50),
+                w nvarchar(50),
+                x nvarchar(50),
+                y nvarchar(50),
+                z nvarchar(50)
+        );
+
+        create table seals --每个柜的封条
+        (
+            id integer primary key,
+            order_no nvarchar(50), --回数
+            a nvarchar(50),
+            b nvarchar(50),
+            c nvarchar(50),
+            d nvarchar(50),
+            e nvarchar(50),
+            f nvarchar(50),
+            g nvarchar(50),
+            h nvarchar(50),
+            i nvarchar(50),
+            j nvarchar(50),
+                k nvarchar(50),
+                l nvarchar(50),
+                m nvarchar(50),
+                n nvarchar(50),
+                o nvarchar(50),
+                p nvarchar(50),
+                q nvarchar(50),
+                r nvarchar(50),
+                s nvarchar(50),
+                t nvarchar(50),
+                u nvarchar(50),
+                v nvarchar(50),
+                w nvarchar(50),
+                x nvarchar(50),
+                y nvarchar(50),
+                z nvarchar(50)
+        );
+
+        create table photos --每个柜的照片
+        (
+            id integer primary key,
+            order_no nvarchar(50), --回数
+            a nvarchar(100),
+            b nvarchar(100),
+            c nvarchar(100),
+            d nvarchar(100),
+            e nvarchar(100),
+            f nvarchar(100),
+            g nvarchar(100),
+            h nvarchar(100),
+            i nvarchar(100),
+            j nvarchar(100),
+                k nvarchar(100),
+                l nvarchar(100),
+                m nvarchar(100),
+                n nvarchar(100),
+                o nvarchar(100),
+                p nvarchar(100),
+                q nvarchar(100),
+                r nvarchar(100),
+                s nvarchar(100),
+                t nvarchar(100),
+                u nvarchar(100),
+                v nvarchar(100),
+                w nvarchar(100),
+                x nvarchar(100),
+                y nvarchar(100),
+                z nvarchar(100)
+        );
+
+        create table times --每个回数的每个条码在每个柜的装柜时间
+        (
+            id integer primary key,
+            order_no nvarchar(50), --回数
+            bar nvarchar(50), --条码
+            a timestamp, --回数+条码 装a柜的最后更新时间
+            b timestamp, --回数+条码 装b柜的最后更新时间
+            c timestamp, --回数+条码 装c柜的最后更新时间
+            d timestamp, --回数+条码 装d柜的最后更新时间
+            e timestamp, --回数+条码 装e柜的最后更新时间
+            f timestamp, --回数+条码 装f柜的最后更新时间
+            g timestamp, --回数+条码 装g柜的最后更新时间
+            h timestamp, --回数+条码 装h柜的最后更新时间
+            i timestamp, --回数+条码 装i柜的最后更新时间
+            j timestamp, --回数+条码 装j柜的最后更新时间
+                k timestamp, --回数+条码 装j柜的最后更新时间
+                l timestamp, --回数+条码 装j柜的最后更新时间
+                m timestamp, --回数+条码 装j柜的最后更新时间
+                n timestamp, --回数+条码 装j柜的最后更新时间
+                o timestamp, --回数+条码 装j柜的最后更新时间
+                p timestamp, --回数+条码 装j柜的最后更新时间
+                q timestamp, --回数+条码 装j柜的最后更新时间
+                r timestamp, --回数+条码 装j柜的最后更新时间
+                s timestamp, --回数+条码 装j柜的最后更新时间
+                t timestamp, --回数+条码 装j柜的最后更新时间
+                u timestamp, --回数+条码 装j柜的最后更新时间
+                v timestamp, --回数+条码 装j柜的最后更新时间
+                w timestamp, --回数+条码 装j柜的最后更新时间
+                x timestamp, --回数+条码 装j柜的最后更新时间
+                y timestamp, --回数+条码 装j柜的最后更新时间
+                z timestamp, --回数+条码 装j柜的最后更新时间
+            allaj timestamp, --回数+条码 整体的最后更新时间
+            a_mark integer,  --回数+条码+a柜是否标记为黄色
+            b_mark integer,  --回数+条码+b柜是否标记为黄色
+            c_mark integer,  --回数+条码+c柜是否标记为黄色
+            d_mark integer,  --回数+条码+d柜是否标记为黄色
+            e_mark integer,  --回数+条码+e柜是否标记为黄色
+            f_mark integer,  --回数+条码+f柜是否标记为黄色
+            g_mark integer,  --回数+条码+g柜是否标记为黄色
+            h_mark integer,  --回数+条码+h柜是否标记为黄色
+            i_mark integer,  --回数+条码+i柜是否标记为黄色
+            j_mark integer,  --回数+条码+j柜是否标记为黄色
+                k_mark integer,  --回数+条码+j柜是否标记为黄色
+                l_mark integer,  --回数+条码+j柜是否标记为黄色
+                m_mark integer,  --回数+条码+j柜是否标记为黄色
+                n_mark integer,  --回数+条码+j柜是否标记为黄色
+                o_mark integer,  --回数+条码+j柜是否标记为黄色
+                p_mark integer,  --回数+条码+j柜是否标记为黄色
+                q_mark integer,  --回数+条码+j柜是否标记为黄色
+                r_mark integer,  --回数+条码+j柜是否标记为黄色
+                s_mark integer,  --回数+条码+j柜是否标记为黄色
+                t_mark integer,  --回数+条码+j柜是否标记为黄色
+                u_mark integer,  --回数+条码+j柜是否标记为黄色
+                v_mark integer,  --回数+条码+j柜是否标记为黄色
+                w_mark integer,  --回数+条码+j柜是否标记为黄色
+                x_mark integer,  --回数+条码+j柜是否标记为黄色
+                y_mark integer,  --回数+条码+j柜是否标记为黄色
+                z_mark integer  --回数+条码+j柜是否标记为黄色
+        );]]>
+    </string>
+</resources>

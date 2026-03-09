@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql_migration_2_3">
+        <![CDATA[
+
+            --2020-12-11，增加 临时调货扫描;
+
+            --1、临时调货扫描 的 装柜记录表;
+            --order_no nvarchar：临时回数，自动生成，格式如：临时-001...;
+            create table unplan_lists
+            (
+                id integer primary key,
+                bar nvarchar(50),
+                model nvarchar(50),
+                name nvarchar(50),
+                a int, --a柜的装柜数量
+                b int, --b柜的装柜数量
+                c int, --c柜的装柜数量
+                d int, --d柜的装柜数量
+                e int, --e柜的装柜数量
+                f int, --f柜的装柜数量
+                g int, --g柜的装柜数量
+                h int, --h柜的装柜数量
+                i int, --i柜的装柜数量
+                j int, --j柜的装柜数量
+                k int, --k柜的装柜数量
+                l int, --l柜的装柜数量
+                m int, --m柜的装柜数量
+                n int, --n柜的装柜数量
+                o int, --o柜的装柜数量
+                p int, --p柜的装柜数量
+                q int, --q柜的装柜数量
+                r int, --r柜的装柜数量
+                s int, --s柜的装柜数量
+                t int, --t柜的装柜数量
+                u int, --u柜的装柜数量
+                v int, --v柜的装柜数量
+                w int, --w柜的装柜数量
+                x int, --x柜的装柜数量
+                y int, --y柜的装柜数量
+                z int, --z柜的装柜数量
+                order_no nvarchar(50)
+            );
+
+            --2、临时调货扫描 的 柜名表;
+            --aj柜对应的柜名，aj是柜号，柜名是贴在货柜身上的一串编号;
+            --order_no nvarchar(50)：回数;
+            create table unplan_ajs
+            (
+                id integer primary key,
+                order_no nvarchar(50), --回数
+                a nvarchar(50),
+                b nvarchar(50),
+                c nvarchar(50),
+                d nvarchar(50),
+                e nvarchar(50),
+                f nvarchar(50),
+                g nvarchar(50),
+                h nvarchar(50),
+                i nvarchar(50),
+                j nvarchar(50),
+                k nvarchar(50),
+                l nvarchar(50),
+                m nvarchar(50),
+                n nvarchar(50),
+                o nvarchar(50),
+                p nvarchar(50),
+                q nvarchar(50),
+                r nvarchar(50),
+                s nvarchar(50),
+                t nvarchar(50),
+                u nvarchar(50),
+                v nvarchar(50),
+                w nvarchar(50),
+                x nvarchar(50),
+                y nvarchar(50),
+                z nvarchar(50)
+            );
+
+            --3、临时调货扫描 的 柜重表;
+            --每个柜的柜重;
+            --order_no nvarchar(50)：回数;
+            create table unplan_weights
+            (
+                id integer primary key,
+                order_no nvarchar(50),
+                a nvarchar(50),
+                b nvarchar(50),
+                c nvarchar(50),
+                d nvarchar(50),
+                e nvarchar(50),
+                f nvarchar(50),
+                g nvarchar(50),
+                h nvarchar(50),
+                i nvarchar(50),
+                j nvarchar(50),
+                k nvarchar(50),
+                l nvarchar(50),
+                m nvarchar(50),
+                n nvarchar(50),
+                o nvarchar(50),
+                p nvarchar(50),
+                q nvarchar(50),
+                r nvarchar(50),
+                s nvarchar(50),
+                t nvarchar(50),
+                u nvarchar(50),
+                v nvarchar(50),
+                w nvarchar(50),
+                x nvarchar(50),
+                y nvarchar(50),
+                z nvarchar(50)
+            );
+
+            --4、临时调货扫描 的 封条表;
+            --每个柜的封条;
+            --order_no nvarchar(50)：回数;
+            create table unplan_seals
+            (
+                id integer primary key,
+                order_no nvarchar(50),
+                a nvarchar(50),
+                b nvarchar(50),
+                c nvarchar(50),
+                d nvarchar(50),
+                e nvarchar(50),
+                f nvarchar(50),
+                g nvarchar(50),
+                h nvarchar(50),
+                i nvarchar(50),
+                j nvarchar(50),
+                k nvarchar(50),
+                l nvarchar(50),
+                m nvarchar(50),
+                n nvarchar(50),
+                o nvarchar(50),
+                p nvarchar(50),
+                q nvarchar(50),
+                r nvarchar(50),
+                s nvarchar(50),
+                t nvarchar(50),
+                u nvarchar(50),
+                v nvarchar(50),
+                w nvarchar(50),
+                x nvarchar(50),
+                y nvarchar(50),
+                z nvarchar(50)
+            );
+
+            --5、临时调货扫描 的 照片表;
+            --每个柜的照片;
+            --order_no nvarchar(50)：回数;
+            create table unplan_photos
+            (
+                id integer primary key,
+                order_no nvarchar(50),
+                a nvarchar(100),
+                b nvarchar(100),
+                c nvarchar(100),
+                d nvarchar(100),
+                e nvarchar(100),
+                f nvarchar(100),
+                g nvarchar(100),
+                h nvarchar(100),
+                i nvarchar(100),
+                j nvarchar(100),
+                k nvarchar(100),
+                l nvarchar(100),
+                m nvarchar(100),
+                n nvarchar(100),
+                o nvarchar(100),
+                p nvarchar(100),
+                q nvarchar(100),
+                r nvarchar(100),
+                s nvarchar(100),
+                t nvarchar(100),
+                u nvarchar(100),
+                v nvarchar(100),
+                w nvarchar(100),
+                x nvarchar(100),
+                y nvarchar(100),
+                z nvarchar(100)
+            );
+
+            --6、临时调货扫描 的 装柜时间表;
+            --每个回数的每个条码在每个柜的装柜时间;
+            --order_no nvarchar(50)：回数;
+            --bar nvarchar(50)：条码;
+            --a timestamp：回数+条码 装a柜的最后更新时间;
+            --allaj timestamp：回数+条码 整体的最后更新时间;
+            --a_mark integer：回数+条码+a柜是否标记为黄色;
+            create table unplan_times
+            (
+                id integer primary key,
+                order_no nvarchar(50),
+                bar nvarchar(50),
+                a timestamp,
+                b timestamp,
+                c timestamp,
+                d timestamp,
+                e timestamp,
+                f timestamp,
+                g timestamp,
+                h timestamp,
+                i timestamp,
+                j timestamp,
+                k timestamp,
+                l timestamp,
+                m timestamp,
+                n timestamp,
+                o timestamp,
+                p timestamp,
+                q timestamp,
+                r timestamp,
+                s timestamp,
+                t timestamp,
+                u timestamp,
+                v timestamp,
+                w timestamp,
+                x timestamp,
+                y timestamp,
+                z timestamp,
+                allaj timestamp,
+                a_mark integer,
+                b_mark integer,
+                c_mark integer,
+                d_mark integer,
+                e_mark integer,
+                f_mark integer,
+                g_mark integer,
+                h_mark integer,
+                i_mark integer,
+                j_mark integer,
+                k_mark integer,
+                l_mark integer,
+                m_mark integer,
+                n_mark integer,
+                o_mark integer,
+                p_mark integer,
+                q_mark integer,
+                r_mark integer,
+                s_mark integer,
+                t_mark integer,
+                u_mark integer,
+                v_mark integer,
+                w_mark integer,
+                x_mark integer,
+                y_mark integer,
+                z_mark integer
+            );
+
+            --7、插入10个临时柜号;
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-1','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-2','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-3','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-4','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-5','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-6','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-7','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-8','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-9','','','','','','','','','','','','','','','','','','','','','','','','','','');
+            INSERT INTO unplan_ajs (order_no,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z) VALUES('临时调货-10','','','','','','','','','','','','','','','','','','','','','','','','','','');
+
+            --8、创建条码库，临时调货扫描 要用到;
+            create table bars --条码库，临时调货扫描要用到
+            (
+              id integer primary key,
+              bar nvarchar(50),
+              model nvarchar(50)
+            );
+
+            --9、创建临时调货扫描的回数名称表。临时调货扫描的系统名称形如：临时调货-1，在上传数据时，会让写一个自己的名称，就存在这个表里
+            create table unplan_order_alias
+            (
+                id integer primary key,
+                order_no nvarchar(50),
+                alias nvarchar(50)
+            );]]>
+    </string>
+
+</resources>

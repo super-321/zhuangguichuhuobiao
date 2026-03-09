@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="cn.scanshop.www.a2_rtmenu.MainActivity">
+    <item
+            android:id="@+id/action_mock"
+            android:orderInCategory="100"
+            android:title="生成演示数据"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/action_backup"
+            android:orderInCategory="101"
+            android:title="备份数据"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/action_restore"
+            android:orderInCategory="101"
+            android:title="恢复数据"
+            app:showAsAction="never" />
+    <item
+            android:id="@+id/action_name"
+            android:title="机器名称" />
+    <item
+            android:id="@+id/action_delphoto"
+            android:orderInCategory="102"
+            android:title="清除照片" />
+    <item
+            android:id="@+id/action_reg"
+            android:orderInCategory="103"
+            android:title="输入注册码" />
+</menu>

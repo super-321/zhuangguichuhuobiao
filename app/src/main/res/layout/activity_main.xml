@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="装柜出货"
+                style="@style/linear_gap"
+                android:id="@+id/btnloading"/>
+        <Button android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="上传数据"
+                style="@style/linear_gap"
+                android:id="@+id/btnexport" android:visibility="gone"/>
+
+        <Button
+                android:id="@+id/btnimport"
+                style="@style/linear_gap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下载装柜出货回数" />
+
+        <Button
+                android:id="@+id/btnunplan"
+                style="@style/linear_gap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="临时调货扫描" />
+
+        <Button
+                android:id="@+id/btnunplanimport"
+                style="@style/linear_gap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下载临时调货条码库" />
+
+        <Button
+                android:id="@+id/btnabout"
+                style="@style/linear_gap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="关于本程序"/>
+        <Button
+                android:id="@+id/btnmock"
+                style="@style/linear_gap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="\@生成测试数据@" android:visibility="gone"/>
+
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!"-->
+        <!--android:layout_weight="1"/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!"-->
+        <!--android:layout_weight="5"/>-->
+
+        <!--<TextView android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="888"-->
+        <!--android:layout_weight="1"/>-->
+        <!--<TextView android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="2"-->
+        <!--android:text="99999"/>-->
+    </LinearLayout>
+
+</LinearLayout>

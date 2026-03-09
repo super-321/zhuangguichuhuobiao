@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="cn.scanshop.www.a2_rtmenu.LoadingActivity">
+    <item android:id="@+id/action_stat"
+          android:title="出货统计"
+          android:orderInCategory="1"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_qty"
+          android:title="修改数量"
+          android:orderInCategory="2"
+          app:showAsAction="never"/>
+    <item android:id="@+id/action_del"
+          android:title="删除本回数"
+          android:orderInCategory="3"
+          app:showAsAction="never"/>
+</menu>

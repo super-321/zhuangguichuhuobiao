@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:orientation="vertical">
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="QQ：83262178"
+                  android:textAlignment="center"
+                  android:textSize="35dp"/>
+
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="MAC SHOWS HERE"
+                  android:textAlignment="center"
+                  android:textSize="20dp"
+                  android:layout_marginVertical="20dp"
+                  android:id="@+id/lblmac"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:text="版本：4.6"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:text="发布时间：2021-1-20"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

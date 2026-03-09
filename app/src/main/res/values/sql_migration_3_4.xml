@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql_migration_3_4">
+        <![CDATA[
+
+            --2021-1-14，支持给临时回数命名;
+
+            --创建临时调货扫描的回数名称表。临时调货扫描的系统名称形如：临时调货-1，在上传数据时，会让写一个自己的名称，就存在这个表里;
+            create table unplan_order_aliases
+            (
+                id integer primary key,
+                order_no nvarchar(50),
+                alias nvarchar(50)
+            );
+
+            --插入10个临时回数的别名，全部都设置为空白;
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-1','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-2','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-3','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-4','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-5','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-6','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-7','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-8','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-9','');
+            INSERT INTO unplan_order_aliases (order_no, alias) VALUES('临时调货-10','');]]>
+    </string>
+
+</resources>

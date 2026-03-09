@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <Space android:layout_width="wrap_content"
+           android:layout_height="10dp"
+    android:layout_weight="1"/>
+
+    <TextView android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="IP地址的 . 可用 * 来输入，如：192*168*0*1"
+              android:layout_marginLeft="10dp"
+              android:textColor="#DD0000"
+              android:layout_alignBottom="@+id/space1"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="电脑IP"
+                  style="@style/socket"/>
+
+        <EditText android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  style="@style/socket"
+                  android:hint="举例：192*168*0*100"
+                  android:id="@+id/txthost"/>
+    </LinearLayout>
+
+
+    <!--<LinearLayout android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="信息"-->
+    <!--android:layout_marginLeft="10dp"/>-->
+
+    <!--<EditText android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:hint="这里输入要发送的内容"-->
+    <!--android:layout_marginHorizontal="10dp"-->
+    <!--android:id="@+id/txtcontent"/>-->
+    <!--</LinearLayout>-->
+
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            style="@style/socket"
+            android:id="@+id/btnreceive"/>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:scrollbars="vertical">
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:scrollbars="vertical"
+                  android:id="@+id/lblreceived"/>
+    </ScrollView>
+</LinearLayout>

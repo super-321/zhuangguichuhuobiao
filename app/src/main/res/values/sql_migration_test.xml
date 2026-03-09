@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sql_migration_test">
+        <![CDATA[
+
+            --2020-12-11，增加 临时调货扫描;
+
+            --1、临时调货扫描 的 装柜记录表;
+            --order_no nvarchar：临时回数，自动生成，格式如：临时-001...;
+            create table lists
+            (
+                id integer primary key,
+                bar nvarchar(50),
+                model nvarchar(50),
+                name nvarchar(50),
+                a int, --a柜的装柜数量
+                b int, --b柜的装柜数量
+                c int, --c柜的装柜数量
+                d int, --d柜的装柜数量
+                e int, --e柜的装柜数量
+                f int, --f柜的装柜数量
+                g int, --g柜的装柜数量
+                h int, --h柜的装柜数量
+                i int, --i柜的装柜数量
+                j int, --j柜的装柜数量
+                k int, --k柜的装柜数量
+                l int, --l柜的装柜数量
+                m int, --m柜的装柜数量
+                n int, --n柜的装柜数量
+                o int, --o柜的装柜数量
+                p int, --p柜的装柜数量
+                q int, --q柜的装柜数量
+                r int, --r柜的装柜数量
+                s int, --s柜的装柜数量
+                t int, --t柜的装柜数量
+                u int, --u柜的装柜数量
+                v int, --v柜的装柜数量
+                w int, --w柜的装柜数量
+                x int, --x柜的装柜数量
+                y int, --y柜的装柜数量
+                z int, --z柜的装柜数量
+                order_no nvarchar(50)
+            );
+]]>
+    </string>
+
+</resources>

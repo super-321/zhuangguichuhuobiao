@@ -1,0 +1,73 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <style name="linear_gap">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">#3385FF</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="order_option">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+    <style name="loading_gap">
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="loading_aj_gap">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="socket">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <!--<item name="android:layout_marginBottom">20dp</item>-->
+    </style>
+
+    <style name="qty_alert">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="stat_item">
+        <!--<item name="android:textAlignment">viewStart</item>-->
+        <!--<item name="android:gravity">left</item>-->
+        <!--<item name="android:textColor">#FF0000</item>-->
+    </style>
+
+    <style name="reg">
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+</resources>
