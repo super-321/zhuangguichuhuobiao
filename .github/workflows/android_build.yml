@@ -15,18 +15,29 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Set up JDK 8 (关键步骤)
+  # 先安装JDK 17用于Android SDK安装（如果必要）
+    - name: Set up JDK 17 (关键步骤)
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17' # 旧Android项目最兼容的JDK版本
+        java-version: '17' 
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       # 无需单独安装SDK，Gradle会自行下载所需组件
 
+    # 然后切换为JDK 8用于Gradle构建
+    - name: Set up JDK 8 for Gradle
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '8'
+
     - name: Grant execute permission for Gradle Wrapper
       run: chmod +x ./gradlew # 确保Wrapper可执行
+
+    - name: Check Java version
+      run: java -version
 
     - name: Build with Gradle
       run: ./gradlew assembleDebug --stacktrace
