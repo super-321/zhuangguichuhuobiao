@@ -19,13 +19,11 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '8' # 旧Android项目最兼容的JDK版本
+        java-version: '17' # 旧Android项目最兼容的JDK版本
 
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       # 无需单独安装SDK，Gradle会自行下载所需组件
-      with:
-        cmdline-tools: '8.0'  # 指定旧版本
 
     - name: Grant execute permission for Gradle Wrapper
       run: chmod +x ./gradlew # 确保Wrapper可执行
