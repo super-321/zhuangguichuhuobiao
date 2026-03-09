@@ -25,6 +25,8 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
       # 无需单独安装SDK，Gradle会自行下载所需组件
+      with:
+        cmdline-tools: 'latest'  # 使用最新版本
 
     # 然后切换为JDK 8用于Gradle构建
     - name: Set up JDK 8 for Gradle
